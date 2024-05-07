@@ -36,17 +36,17 @@ public class CrudWithVaadinApplication {
 			log.info("");
 
 			// fetch an individual customer by ID
-			Customer customer = repository.findById(1L).get();
-			log.info("Customer found with findOne(1L):");
-			log.info("--------------------------------");
-			log.info(customer.toString());
-			log.info("");
+//			Customer customer = repository.findByFirstName("Kim");
+//			log.info("Customer found with findByFirstName('Kim'):");
+//			log.info("--------------------------------");
+//			log.info(customer.toString());
+//			log.info("");
 
 			// fetch customers by last name
 			log.info("Customer found with findByLastNameStartsWithIgnoreCase('Bauer'):");
 			log.info("--------------------------------------------");
 			for (Customer bauer : repository
-					.findByLastNameStartsWithIgnoreCase("Bauer")) {
+					.findByLastName("Bauer")) {
 				log.info(bauer.toString());
 			}
 			log.info("");

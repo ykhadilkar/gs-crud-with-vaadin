@@ -1,15 +1,11 @@
 package com.example.crudwithvaadin;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
 
-@Entity
 public class Customer {
 
 	@Id
-	@GeneratedValue
-	private Long id;
+	private String id;
 
 	private String firstName;
 
@@ -23,7 +19,7 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -45,7 +41,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id,
+		return String.format("Customer[id=%s, firstName='%s', lastName='%s']", id,
 				firstName, lastName);
 	}
 

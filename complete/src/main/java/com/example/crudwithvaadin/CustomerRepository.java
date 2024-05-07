@@ -1,10 +1,11 @@
 package com.example.crudwithvaadin;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
+public interface CustomerRepository extends MongoRepository<Customer, String> {
 
-	List<Customer> findByLastNameStartsWithIgnoreCase(String lastName);
+	public Customer findByFirstName(String firstName);
+	public List<Customer> findByLastName(String lastName);
 }

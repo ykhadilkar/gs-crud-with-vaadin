@@ -20,6 +20,6 @@ public class CrudWithVaadinApplicationTests {
 
 	@Test
 	public void shouldFindTwoBauerCustomers() {
-		then(this.repository.findByLastNameStartsWithIgnoreCase("Bauer")).hasSize(2);
+		then(this.repository.findByLastName("Bauer")).hasSize(2);
 	}
 }
