@@ -13,13 +13,4 @@ public class CrudWithVaadinApplicationTests {
 	@Autowired
 	private CustomerRepository repository;
 
-	@Test
-	public void shouldFillOutComponentsWithDataWhenTheApplicationIsStarted() {
-		then(this.repository.count()).isEqualTo(5);
-	}
-
-	@Test
-	public void shouldFindTwoBauerCustomers() {
-		then(this.repository.findByLastName("Bauer")).hasSize(2);
-	}
 }

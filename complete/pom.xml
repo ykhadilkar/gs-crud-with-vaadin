@@ -10,7 +10,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>crud-with-vaadin-initial</artifactId>
+	<artifactId>spring-boot-mongo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>crud-with-vaadin-initial</name>
 	<description>Demo project for Spring Boot</description>
@@ -27,11 +27,11 @@
 			<artifactId>vaadin-spring-boot-starter</artifactId>
 		</dependency>
 		<!-- end::starter[] -->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--		</dependency>-->
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		<dependency>
       		<groupId>org.springframework.boot</groupId>
       		<artifactId>spring-boot-starter-data-mongodb</artifactId>

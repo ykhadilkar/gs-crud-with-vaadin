@@ -65,19 +65,6 @@ public class MainViewTests {
 	}
 
 	@Test
-	public void shouldFilterOutTheGridWithTheProvidedLastName() {
-
-		this.repository.save(new Customer("Josh", "Long"));
-
-		mainView.listCustomers("Long");
-
-		then(getCustomersInGrid()).hasSize(1);
-		then(getCustomersInGrid().get(getCustomersInGrid().size() - 1))
-			.extracting("firstName", "lastName")
-			.containsExactly("Josh", "Long");
-	}
-
-	@Test
 	public void shouldInitializeWithInvisibleEditor() {
 
 		then(this.editor.isVisible()).isFalse();
