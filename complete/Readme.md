@@ -17,7 +17,7 @@ spring.profiles.active=production
 ```
 
 Create config map from the file
-`kubectl create configmap spring --from-file=./config/cm.application.properties`
+`kubectl create configmap spring --from-file=./application.properties`
 
 ### Create Deployment and Service
 ```bash
